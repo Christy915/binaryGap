@@ -1,3 +1,4 @@
+//It didn't pass the tests when I tried big numbers.
 function binaryGap(n){
   let binary = n.toString(2)
   let curGap = 0
