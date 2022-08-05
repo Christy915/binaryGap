@@ -1,5 +1,6 @@
 function binaryGap(n){
   let binary = n.toString(2)
+  console.log(binary)
   let curGap = 0
   let maxGap = 0
   if (n == 0){
@@ -9,13 +10,12 @@ function binaryGap(n){
       if (binary[i]== 0){
         curGap++
       }else{
+        maxGap = Math.max(maxGap, curGap)
         curGap = 0
       }
-      maxGap = Math.max(maxGap, curGap)
-  }
+    }
   return maxGap 
   }
 }
   
-console.log(binaryGap(529))
-
+console.log(binaryGap(16))
