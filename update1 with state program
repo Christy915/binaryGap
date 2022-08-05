@@ -1,0 +1,23 @@
+function binaryGap(n){
+    let binary = n.toString(2)
+    let oneFound = false
+    let curGap = 0
+    let maxGap = 0
+    for (let i = 0; i<binary.length; i++){
+      if(!oneFound){
+        if(binary[i] == 1){
+          oneFound = true
+        }
+      }else{
+        if (binary[i]== 0){
+          curGap++
+        }else{
+          curGap = 0
+        }
+        maxGap = Math.max(maxGap, curGap)
+    }
+    }
+    return maxGap 
+  }
+    
+console.log(binaryGap(20))

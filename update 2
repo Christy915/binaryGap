@@ -1,0 +1,26 @@
+//It didn't pass the tests when I tried big numbers.
+function binaryGap(n){
+  let binary = n.toString(2)
+  let curGap = 0
+  let maxGap = 0
+  let oneFound = false
+  
+  if (n == 0){
+    maxGap = 0
+  }else{
+    for (let i = 0; i<binary.length; i++){
+      if (binary[i] == 1){
+        oneFound = true
+        for (let j = i+1; j<binary.length; j++){
+          if (binary[j] == 1){
+            curGap = j-i-1
+          }
+        }  
+      }
+    maxGap = Math.max(maxGap, curGap)
+    }
+   }
+  return maxGap
+}
+
+console.log(binaryGap(18))
